@@ -14,3 +14,27 @@ $router->get('/', [$controller, 'getAllTrades']);
 $router->get('/api/trades/index', [$controller, 'getAllTrades']);
 
 $router->get('/api/trades/(\d+)', [$controller, 'getTradeById']);
+
+$router->get('/api/login', [$controller, ]); // TODO : Add login function
+
+$router->post('/api/signup' , [$controller, ]); // TODO : Add signup function
+
+$router->post('/api/wire', [$controller, ]); // TODO : Add wire function
+
+$router->get('/api/profile', [$controller, ]); // TODO: Add getProfile function
+
+$router->patch('/api/update', [$controller, ]); // TODO : Add updateProfile function
+
+$router->get('/api/trades/index/open', [$controller, ]); // TODO : Add getAllOpenTrades function
+
+$router->get('/api/trades/index/closed', [$controller, ]); // TODO : Add getAllClosedTrades
+
+$router->post('/api/openTrade', [$controller, ]); // TODO : Add buy function
+
+$router->post('/api/closeTrade/(\d+)', [$controller, ]); // TODO : Add close function
+
+$router->get('/api/closedPNL', [$controller, ]); // TODO : Add getTotalClosedTrades function
+
+$router->get('/api/openPNL', [$controller ]); // TODO : Add getTotalOpenTrades function
+
+$router->get('/api/cureentBalance', [$controller ]); // TODO : Add getCurrentBalance function
