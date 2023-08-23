@@ -27,5 +27,6 @@ class ProfileModel {
         $statement->bindParam(':first_name', PDO::PARAM_STR);
         $statement->bindParam(':last_name', PDO::PARAM_STR);
         $statement->bindParam(':address', PDO::PARAM_STR);
+        $statement->execute();
     }
 }
