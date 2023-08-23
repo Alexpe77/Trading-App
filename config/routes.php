@@ -8,6 +8,7 @@ require_once './controllers/tradeController.php';
 
 $router = new Router();
 $controller = new TradeController();
+$profile = new ProfileController();
 
 $router->get('/', [$controller, 'getAllTrades']);
 
@@ -23,7 +24,7 @@ $router->post('/api/wire', [$controller, ]); // TODO : Add wire function
 
 $router->get('/api/profile', [$controller, ]); // TODO: Add getProfile function
 
-$router->patch('/api/update', [$controller, ]); // TODO : Add updateProfile function
+$router->patch('/api/update', [$profile, 'updateProfile']);
 
 $router->get('/api/trades/index/open', [$controller, ]); // TODO : Add getAllOpenTrades function
 
