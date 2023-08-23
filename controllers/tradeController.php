@@ -1,10 +1,10 @@
 <?php
 
-require_once './models/model.php';
+require_once './models/tradeModel.php';
 
-class Controller {
+class TradeController {
     public function getAllTrades() {
-        $dataModel = new Trade();
+        $dataModel = new TradeModel();
         $data = $dataModel->getAllTrades();
 
         header('Content-Type: application/json');
@@ -12,7 +12,7 @@ class Controller {
     }
 
     public function getTradeById($tradeId) {
-        $dataModel = new Trade();
+        $dataModel = new TradeModel();
         $data = $dataModel->getTradeById($tradeId);
 
         header('Content-Type: application/json');

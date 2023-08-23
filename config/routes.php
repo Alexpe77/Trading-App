@@ -3,11 +3,11 @@
 use Bramus\Router\Router;
 
 require_once './vendor/autoload.php';
-require_once './models/model.php';
-require_once './controllers/controller.php';
+require_once './models/tradeModel.php';
+require_once './controllers/tradeController.php';
 
 $router = new Router();
-$controller = new Controller();
+$controller = new TradeController();
 
 $router->get('/', [$controller, 'getAllTrades']);
 
