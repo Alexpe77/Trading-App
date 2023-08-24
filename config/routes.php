@@ -22,7 +22,7 @@ $router->post('/api/signup' , [$controller, ]); // TODO : Add signup function
 
 $router->post('/api/wire', [$controller, ]); // TODO : Add wire function
 
-$router->get('/api/profile', [$controller, ]); // TODO: Add getProfile function
+$router->get('/api/profile', [$profile, 'getProfile']);
 
 $router->patch('/api/update', [$profile, 'updateProfile']);
 
