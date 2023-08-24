@@ -10,7 +10,7 @@ class ProfileModel {
     }
 
     public function getProfileById() {
-        $query = "SELECT id, user_id, first_name, last_name, address
+        $query = "SELECT id, first_name, last_name, address
         FROM profile";
         $statement = $this->db->prepare($query);
         $statement->execute();

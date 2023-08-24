@@ -5,6 +5,8 @@ use Bramus\Router\Router;
 require_once './vendor/autoload.php';
 require_once './models/tradeModel.php';
 require_once './controllers/tradeController.php';
+require_once './models/profileModel.php';
+require_once './controllers/profileController.php';
 
 $router = new Router();
 $controller = new TradeController();
@@ -22,7 +24,7 @@ $router->post('/api/signup' , [$controller, ]); // TODO : Add signup function
 
 $router->post('/api/wire', [$controller, ]); // TODO : Add wire function
 
-$router->get('/api/profile', [$profile, 'getProfile']);
+$router->get('/api/profile/(\d+)', [$profile, 'getProfileById']);
 
 $router->patch('/api/update', [$profile, 'updateProfile']);
 
@@ -36,6 +38,6 @@ $router->post('/api/closeTrade/(\d+)', [$controller, ]); // TODO : Add close fun
 
 $router->get('/api/closedPNL', [$controller, ]); // TODO : Add getTotalClosedTrades function
 
-$router->get('/api/openPNL', [$controller ]); // TODO : Add getTotalOpenTrades function
+$router->get('/api/openPNL', [$controller, ]); // TODO : Add getTotalOpenTrades function
 
-$router->get('/api/cureentBalance', [$controller ]); // TODO : Add getCurrentBalance function
+$router->get('/api/currentBalance', [$controller, ]); // TODO : Add getCurrentBalance function
